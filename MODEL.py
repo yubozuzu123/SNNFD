@@ -503,12 +503,5 @@ def generate_filter(start, end, size):
 def norm_sigma(x):
     return 2. * torch.sigmoid(x) - 1.
     
-    
-if __name__ == "__main__":
-    torch.cuda.set_device(2)
-    device_alone = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model = F3Net()
-    patch = torch.randn(5, 3, 512, 512)
-    out=model(patch)
-    print(out.shape)
+
    
